@@ -1,6 +1,17 @@
-const alunos = ['Kauã', 'Lucas', 'Ian']
+const notas = []
 
-alunos.push('Enzo')
+notas.push(8)
+notas.push(9)
+notas.push(10)
+notas.push(9)
+notas.push(10)
 
-alunos[4] = 'Esther'
-console.log(alunos[3])
+let soma = 0
+
+for (let i = 0; i = notas.length; i++){
+    const nota = notas[i]
+    soma = soma + nota
+}
+
+const media = soma / notas.length
+console.log(media)  

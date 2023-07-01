@@ -1,8 +1,15 @@
 const {gets, print} = require('./importacao')
 
-const numerosSorteados = []
+
+
+
+let maiorValor = 0
 
 for (let i = 0; i < 5; i++){
-    const numerosSorteados = gets()
-    numerosSorteados.push(numerosSorteados)
+    const numeroSorteado = gets
+    if (numeroSorteado > maiorValor) {
+        maiorValor = numeroSorteado
+    }
 }
+
+print(maiorValor)

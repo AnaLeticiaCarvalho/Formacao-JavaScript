@@ -1,10 +1,10 @@
 // Funções auxiliares
-const conjuntoEntrada = [5, 50, 10, 98, 23]
+const entradas = [-1]
 
 let i = 0
 
 function gets() {
-    const valor = conjuntoEntrada[i]
+    const valor = entradas[i]
     i++
     return valor
 }

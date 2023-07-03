@@ -1,5 +1,5 @@
 // Funções auxiliares
-const entradas = [5, 3, 4, 1, 10, 8]
+const entradas = [2000]
 
 let i = 0
 

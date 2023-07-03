@@ -1,28 +1,67 @@
 const {gets, print} = require('./importacao')
 
-const N = gets();
-let maiorNumeroPar = 0;
-let menorNumeroImpar = 1;
+const valorSalario = parseFloat(gets());
+const valorBeneficios = parseFloat(gets());
 
-for (let i = 0; i < N; i++){
-    const numero = parseInt(gets())
+function calcularPorcentagem(valor, percentual) {
+    return valor * (percentual / 100);
+}
+  
+function pegarAliquota(salario) {
+    if (salario >= 0 && salario <= 1100) {
+        return 5
+    }
 
-    if (numero % 2 == 0) {
-        if (numero > maiorNumeroPar) {
-            maiorNumeroPar = numero
-        }
-        
+    else if (salario >= 1100.01 && salario <= 2500) {
+        return 10
     }
 
     else {
-        if (numero <= menorNumeroImpar) {
-            menorNumeroImpar = numero
-        }
-    }
+        return 15
+   }
 }
 
-print('Maior número par:' + maiorNumeroPar)
-print('Menor número ímpar: ' + menorNumeroImpar)
+const aliquotaImposto = pegarAliquota(valorSalario)
+
+const valorImposto = calcularPorcentagem(valorSalario, aliquotaImposto)
+
+const valorATransferir = valorSalario - valorImposto + valorBeneficios
+
+print(valorATransferir.toFixed(2))
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*const N = gets();
+let maiorNumeroPar = 0;
+let menorNumeroImpar = 1;
+
+for (let i = 0; i < N; i++) {
+  const numero = parseInt(gets());
+
+  if (numero % 2 === 0) {
+    if (numero > maiorNumeroPar) {
+      maiorNumeroPar = numero;
+    }
+  } else {
+    if (menorNumeroImpar === 1 || numero < menorNumeroImpar) {
+      menorNumeroImpar = numero;
+    }
+  }
+}
+
+print(`Maior número par: ${maiorNumeroPar}`);
+print(`Menor número impar: ${menorNumeroImpar}`);*/
 
 
 
